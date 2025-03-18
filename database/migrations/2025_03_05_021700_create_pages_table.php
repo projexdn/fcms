@@ -11,12 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('blog_categories', function (Blueprint $table) {
+        Schema::create('pages', function (Blueprint $table) {
             $table->id();
-            $table->string('type', 100)->default('post');
+            $table->string('type')->default('default')->index();
+            $table->bigInteger('user_id')->index();
             $table->string('title');
             $table->string('slug', 100)->unique();
             $table->string('banner')->nullable();
+            $table->longText('body_html')->nullable();
+            $table->longText('body_json')->nullable();
+            $table->tinyInteger('is_using_builder')->default(0);
             $table->tinyInteger('is_published')->default(0)->index();
             $table->timestamps();
         });
@@ -27,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('blog_categories');
+        Schema::dropIfExists('pages');
     }
 };
