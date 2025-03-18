@@ -3,8 +3,8 @@
 namespace App\Fcore\Trait;
 
 use App\Fcore\Class\BlockSchema;
-use App\Filament\Resources\BlogPostResource\Pages;
-use App\Filament\Resources\BlogPostResource\RelationManagers;
+use App\Filament\Admin\Resources\BlogPostResource\Pages;
+use App\Filament\Admin\Resources\BlogPostResource\RelationManagers;
 use App\Models\BlogCategory;
 use App\Models\BlogPost;
 use App\Models\BlogPostMeta;

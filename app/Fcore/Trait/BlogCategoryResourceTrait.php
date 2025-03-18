@@ -2,8 +2,8 @@
 
 namespace App\Fcore\Trait;
 
-use App\Filament\Resources\BlogCategoryResource\Pages;
-use App\Filament\Resources\BlogCategoryResource\RelationManagers;
+use App\Filament\Admin\Resources\BlogCategoryResource\Pages;
+use App\Filament\Admin\Resources\BlogCategoryResource\RelationManagers;
 use App\Models\BlogCategory;
 use App\Models\BlogPostType;
 use Filament\Forms;
